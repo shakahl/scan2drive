@@ -70,7 +70,7 @@ func oauthConfigFromJSON(jsonKey []byte) (*oauth2.Config, error) {
 	return &oauth2.Config{
 		ClientID:     c.ClientID,
 		ClientSecret: c.ClientSecret,
-		RedirectURL:  "postmessage",
+		RedirectURL:  "http://localhost:7120/oauth",
 		Scopes:       []string{drive.DriveScope, "profile", "email"},
 		Endpoint: oauth2.Endpoint{
 			AuthURL:  c.AuthURI,
